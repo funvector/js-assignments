@@ -559,9 +559,7 @@ function getElementByIndexes(arr, indexes) {
  * 
  */
 function swapHeadAndTail(arr) {
-  let midOdd = (Math.ceil(arr.length/2));
-  let midEven = (arr.length/2);
-  return ((arr%2!=0)? arr.slice(midEven).concat(arr.slice(0,midEven)) : arr.slice(midOdd).concat(arr.slice(0,midOdd-1)));
+  throw new Error('Not implemented');
 }
 
 
