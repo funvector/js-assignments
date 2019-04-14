@@ -469,7 +469,7 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-   throw new Error('Not implemented');
+  return arr.filter((v, i, a) => a.indexOf(v) === i);
 }
 
 /**
@@ -519,7 +519,7 @@ function group(array, keySelector, valueSelector) {
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
 function selectMany(arr, childrenSelector) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 
@@ -555,11 +555,13 @@ function getElementByIndexes(arr, indexes) {
  *     head     tail 
  *
  *   [ 1, 2 ]  => [ 2, 1 ] 
- *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]   
+ *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]
  * 
  */
 function swapHeadAndTail(arr) {
-    throw new Error('Not implemented');
+  let midOdd = (Math.ceil(arr.length/2));
+  let midEven = (arr.length/2);
+  return ((arr%2!=0)? arr.slice(midEven).concat(arr.slice(0,midEven)) : arr.slice(midOdd).concat(arr.slice(0,midOdd-1)));
 }
 
 
