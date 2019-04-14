@@ -454,7 +454,7 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
-   throw new Error('Not implemented');
+  return (Array.apply(null, Array((end - start) + 1)).map(function(_, n){ return n + start;}));
 }
 
 /**
